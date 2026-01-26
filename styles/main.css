@@ -1,3 +1,7 @@
+:root {
+  --color-white: #fff;
+}
+
 @font-face {
   src: url("../assets/fonts/roboto-regular.woff2") format("woff2");
   font-family: "roboto-st";
@@ -22,40 +26,6 @@
   font-weight: 700;
   font-style: italic;
 }
-.connect-icon {
-  mask-image: url("../assets/icons/connect-icon.svg");
-  -webkit-mask-image: url("../assets/icons/connect-icon.svg");
-}
-
-.cross-icon {
-  mask-image: url("../assets/icons/cross-icon.svg");
-  -webkit-mask-image: url("../assets/icons/cross-icon.svg");
-}
-
-.edit-icon {
-  mask-image: url("../assets/icons/edit-icon.svg");
-  -webkit-mask-image: url("../assets/icons/edit-icon.svg");
-}
-
-.plus-icon {
-  mask-image: url("../assets/icons/plus-icon.svg");
-  -webkit-mask-image: url("../assets/icons/plus-icon.svg");
-}
-
-.download-icon {
-  mask-image: url("../assets/icons/download-icon.svg");
-  -webkit-mask-image: url("../assets/icons/download-icon.svg");
-}
-
-.upload-icon {
-  mask-image: url("../assets/icons/upload-icon.svg");
-  -webkit-mask-image: url("../assets/icons/upload-icon.svg");
-}
-
-.save-icon {
-  mask-image: url("../assets/icons/save-icon.svg");
-  -webkit-mask-image: url("../assets/icons/save-icon.svg");
-}
 
 * {
   margin: 0;
@@ -64,26 +34,161 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  padding: 0 14vw;
   font-family: roboto-st, sans-serif;
   line-height: 1.65;
   font-size: 16px;
   color: rgba(16, 16, 16, 0.8);
+  background-color: #1C1C1C;
 }
 
-.start-icons {
+.top-image {
+  position: absolute;
+  background-image: url(../assets/images/main-image.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 1020px;
+  z-index: -1;
+}
+
+.content-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: 10000px;
+  outline: 1px solid red;
+}
+
+header {
   display: flex;
-  gap: 20px;
-}
-.start-icons > i {
-  display: block;
-  width: 45px;
-  height: 45px;
-  mask-size: contain;
-  -webkit-mask-size: contain;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  object-fit: cover;
-  background-color: #55C5FF;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url('../assets/icons/logo.png');
+    background-size: contain;
+    margin-left: -30px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 32%;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--color-white);
+      text-transform: uppercase;
+      opacity: .7;
+      transition: .2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  button {
+    width: 165px;
+  }
 }
 
-/*# sourceMappingURL=main.css.map */
+.top-info {
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  margin-top: 185px;
+  color: var(--color-white);
+
+  .additional-info {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 57px;
+    width: 500px;
+    line-height: 1.2;
+  }
+
+  .description {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    opacity: .7;
+  }
+
+  button {
+    width: 165px;
+    margin-top: 42px;
+  }
+}
+
+.menu {
+  margin-top: 356px;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    .card {
+      min-height: 320px;
+      background-color: #312f30;
+      border-radius: 10px;
+      color: var(--color-white);
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 264px;
+
+        .name {
+          margin-top: 18px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .description {
+          width: 85%;
+          margin-top: 5px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.25;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+button {
+  background-color: #F6762C;
+  padding: 15px 37px;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: .2s;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #874118;
+  }
+}
