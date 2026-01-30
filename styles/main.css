@@ -192,3 +192,154 @@ button {
     background-color: #874118;
   }
 }
+.food {
+  margin-top: 102px;
+
+  .background {
+    position: absolute;
+    margin: 0 -14vw;
+    width: 100vw;
+    height: 543px;
+    background-color: #312F30;
+    z-index: -1;
+  }
+
+  .food-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .definition {
+      width: 370px;
+      margin: 165px 97px 0;
+      color: var(--color-white);
+
+      h2 {
+        font-weight: 500;
+        font-size: 44px;
+        width: 500px;
+        line-height: normal;
+      }
+
+      .history {
+        width: 99%;
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        opacity: 0.7;
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        margin-top: 13px;
+        gap: 6px;
+        color: #f6762c;
+
+        .current-price {
+          font-weight: 500;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+        }
+
+        .previous-price {
+          font-weight: 500;
+          font-size: 16px;
+          letter-spacing: 0.1em;
+          text-decoration: line-through;
+          opacity: 0.5;
+        }
+      }
+      button {
+        margin-top: 11px;
+      }
+    }
+
+  }
+}
+
+.restaurants {
+  margin-top: 150px;
+
+  .sells {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    .sell {
+      min-height: 320px;
+      background-color: #312f30;
+      color: var(--color-white);
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 264px;
+
+        h3 {
+          margin-top: 18px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        /*&.sell1 {*/
+        /*  background-image: url(../assets/images/coffee.png);*/
+        /*}*/
+
+        .intelligence {
+          width: 85%;
+          margin-top: 5px;
+          text-align: center;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 1.25;
+          opacity: 0.7;
+        }
+
+        .price-firm {
+          display: flex;
+          align-items: center;
+          margin-top: 13px;
+          gap: 6px;
+          color: #f6762c;
+
+          .min-price {
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.1em;
+          }
+
+          .max-price {
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.1em;
+            text-decoration: line-through;
+            opacity: 0.5;
+          }
+        }
+        button {
+          margin-top: 11px;
+        }
+      }
+    }
+
+    .sell1 {
+      background-image: url(../assets/images/coffee.png);
+    }
+
+    .sell2 {
+      background-image: url(../assets/images/big-pizza.png);
+    }
+
+    .sell3 {
+      background-image: url(../assets/images/small-burger.png);
+    }
+
+    .sell4 {
+      background-image: url(../assets/images/shava.png);
+    }
+
+  }
+}
