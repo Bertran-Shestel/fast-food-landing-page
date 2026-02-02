@@ -177,7 +177,7 @@ header {
 
 button {
   background-color: #F6762C;
-  padding: 15px 37px;
+  padding: 15px;
   border-radius: 5px;
   color: var(--color-white);
   font-weight: 500;
@@ -262,21 +262,24 @@ button {
   margin-top: 150px;
 
   .sells {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
 
     .sell {
-      min-height: 320px;
+      min-height: 300px;
+      width: 555px;
       background-color: #312f30;
+      background-repeat: no-repeat;
       color: var(--color-white);
 
       .text {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
         width: 100%;
         max-width: 264px;
+        margin-top: 63px;
 
         h3 {
           margin-top: 18px;
@@ -291,7 +294,6 @@ button {
         .intelligence {
           width: 85%;
           margin-top: 5px;
-          text-align: center;
           font-weight: 400;
           font-size: 16px;
           line-height: 1.25;
@@ -320,6 +322,8 @@ button {
           }
         }
         button {
+          max-width: 140px;
+          max-height: 40px;
           margin-top: 11px;
         }
       }
@@ -341,5 +345,12 @@ button {
       background-image: url(../assets/images/shava.png);
     }
 
+    .sell:nth-child(even) .text {
+      margin: 63px 253px 63px 50px
+    }
+
+    .sell:nth-child(odd) .text {
+      margin: 63px 1px 63px 290px;
+    }
   }
 }
